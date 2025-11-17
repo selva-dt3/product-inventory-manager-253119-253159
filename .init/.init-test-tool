@@ -1,4 +1,4 @@
 {
     "command": "npm run test",
-    "working_directory": "/home/kavia/workspace/code-generation/product-inventory-manager-253119-253159/FastAPIBackend"
+    "working_directory": "/home/kavia/workspace/code-generation/product-inventory-manager-253119-253159/frontend"
 }

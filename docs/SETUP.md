@@ -8,7 +8,7 @@ This document references and complements:
 - docs/supabase/schema.sql
 - docs/supabase/storage_setup.md
 - backend/README.md
-- FastAPIBackend/INTEGRATION.md
+- frontend/INTEGRATION.md
 
 ## Prerequisites
 
@@ -60,9 +60,9 @@ Note on object path convention:
 
 The application is split into:
 - Backend at product-inventory-manager-253119-253159/backend (FastAPI)
-- Frontend at product-inventory-manager-253119-253159/FastAPIBackend (React)
+- Frontend at product-inventory-manager-253119-253159/frontend (React)
 
-Create a .env file at the project repository root and ensure these variables are available to the backend process. For the frontend, create a .env in the FastAPIBackend folder. Keep secrets out of source control.
+Create a .env file at the project repository root and ensure these variables are available to the backend process. For the frontend, create a .env in the frontend folder. Keep secrets out of source control.
 
 ### 2.1 Backend .env (project root)
 
@@ -97,9 +97,9 @@ URL_SIGN_EXPIRY_SECONDS=3600
 Important:
 - Never expose SUPABASE_SERVICE_ROLE_KEY in the frontend or in logs. This key must remain server-side only.
 
-### 2.2 Frontend .env (FastAPIBackend/.env)
+### 2.2 Frontend .env (frontend/.env)
 
-The frontend uses REACT_APP_API_BASE to determine the base URL for API calls (see FastAPIBackend/src/api/client.js and FastAPIBackend/INTEGRATION.md).
+The frontend uses REACT_APP_API_BASE to determine the base URL for API calls (see frontend/src/api/client.js and frontend/INTEGRATION.md).
 
 Required:
 - REACT_APP_API_BASE=http://localhost:8000
@@ -137,9 +137,9 @@ CORS:
 
 ### 3.2 Frontend
 
-From product-inventory-manager-253119-253159/FastAPIBackend:
+From product-inventory-manager-253119-253159/frontend:
 
-1) Create FastAPIBackend/.env with:
+1) Create frontend/.env with:
 ```
 REACT_APP_API_BASE=http://localhost:8000
 ```
@@ -224,8 +224,8 @@ Security considerations:
 - Database schema: docs/supabase/schema.sql
 - Storage setup: docs/supabase/storage_setup.md
 - Backend configuration and env variables: backend/app/config.py, backend/README.md
-- Frontend API configuration: FastAPIBackend/src/api/client.js
-- Integration overview: FastAPIBackend/INTEGRATION.md
+- Frontend API configuration: frontend/src/api/client.js
+- Integration overview: frontend/INTEGRATION.md
 
 ## 8) Appendix: .env Examples
 
@@ -242,11 +242,11 @@ CORS_ORIGINS=http://localhost:3000
 URL_SIGN_EXPIRY_SECONDS=3600
 ```
 
-Frontend (FastAPIBackend/.env):
+Frontend (frontend/.env):
 ```
 REACT_APP_API_BASE=http://localhost:8000
 ```
 
 These examples reflect actual variables used by the codebase:
 - Backend reads all SUPABASE_* variables, CORS_ORIGINS, LOG_LEVEL, BACKEND_PORT, URL_SIGN_EXPIRY_SECONDS (see backend/app/config.py)
-- Frontend reads REACT_APP_API_BASE (see FastAPIBackend/src/api/client.js)
+- Frontend reads REACT_APP_API_BASE (see frontend/src/api/client.js)

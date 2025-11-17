@@ -1,4 +1,4 @@
 {
-    "command": "npm install && npx tsc --noEmit && npm test -- --ci",
-    "working_directory": "/home/kavia/workspace/code-generation/product-inventory-manager-253119-253159/FastAPIBackend"
+    "command": "npm install && npm test -- --ci",
+    "working_directory": "/home/kavia/workspace/code-generation/product-inventory-manager-253119-253159/frontend"
 }

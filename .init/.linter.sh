@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/kavia/workspace/code-generation/product-inventory-manager-253119-253159/FastAPIBackend
+cd /home/kavia/workspace/code-generation/product-inventory-manager-253119-253159/frontend
 npm run build
 EXIT_CODE=$?
 if [ $EXIT_CODE -ne 0 ]; then
