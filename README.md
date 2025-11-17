@@ -1,1 +1,3 @@
-# product-inventory-manager-253119-253159
+# Project Repository
+
+This is the initial README file for the project.
